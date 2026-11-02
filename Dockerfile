@@ -31,7 +31,6 @@ COPY alembic.ini alembic.ini
 COPY scripts/ scripts/
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
-RUN chmod -R a+rX /app /docker-entrypoint.sh
 
 # Safe to run as any non-root UID: everything readable (independent of the
 # build host's umask), and the default model directory writable so the model
